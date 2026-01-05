@@ -2,6 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import profileImg from '@/assets/profileImg.jpg'
+import TypewriterEffect from '@/components/TypewriterEffect'
 import { fadeInUp, fadeInLeft, fadeInRight, floatingAnimation, staggerContainer, staggerItem } from '@/lib/motion-variants'
 
 const Hero = () => {
@@ -16,21 +18,31 @@ const Hero = () => {
             variants={staggerContainer}
           >
             <motion.div variants={staggerItem}>
-              <Badge variant="secondary" className="mb-2">
-                I AM Web Developer
+              <Badge variant="secondary" className="mb-2 text-center">
+                Hello,  I'm
               </Badge>
+              <motion.h1 
+                className="text-4xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent mb-2"
+                variants={staggerItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                SHAKIL AHMED NILOY
+              </motion.h1>
+              <TypewriterEffect />
             </motion.div>
             <motion.h1 
-              className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
+              className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900 dark:text-white mb-2"
               variants={staggerItem}
             >
-              Maximize Your Business <span className="text-primary underline decoration-wavy decoration-2 underline-offset-4">Potential</span> with Custom Web Development <span className="text-primary">Solutions!</span>
+              Full Stack <span className="text-primary underline decoration-2 underline-offset-4">MERN</span> Developer Building Modern Web <span className="text-primary">Applications!</span>
             </motion.h1>
             <motion.p 
               className="text-lg text-gray-600 dark:text-gray-400 max-w-lg"
               variants={staggerItem}
             >
-              Take your business to the next level with custom web development solutions tailored to your unique needs.
+              Specialized in MongoDB, Express.js, React, and Node.js to build scalable, high-performance web applications tailored to your needs.
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4 pt-4"
@@ -42,7 +54,14 @@ const Hero = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="#">
+                <a 
+                  href="https://docs.google.com/document/d/15sNm_jo9s0lh6bGe1diHUnRM1jzOdHZ6ccZ_zqRqV5M/export?format=pdf"
+                  download="Shakil_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  <i className="fas fa-download"></i>
                   Download CV
                 </a>
               </Button>
@@ -55,13 +74,28 @@ const Hero = () => {
             variants={fadeInRight}
           >
             <div className="absolute w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] blob-bg opacity-20 dark:opacity-30 blur-2xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            
+            {/* Perfect Circle - Clockwise */}
+            <motion.div 
+              className="absolute w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] rounded-full border-2 border-dashed border-primary/30"
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+            
             <div className="relative w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] bg-gradient-to-b from-purple-500 to-indigo-600 rounded-full flex items-end justify-center overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
               <img 
                 alt="Web Developer Portrait" 
                 className="w-full h-full object-cover object-top transform scale-110 translate-y-4" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXbfxC-RG_b0jwR4Wf4bDFUBTeb5qjAMJy2ipdUPgMqdPhswoFpTtE88A76HUZxFpPSpGjOB7ETY1EwVt-lRqD5s5uLw6CW_XkqtzVw7by0-xZJaDWhw7FXLszO5fw9xb8OxvqZ7ab1Ogg2v51JUhQTCCcZUdS-yZfVrgb1KZ8xTAcqteSJMdC0dqVAqoyq0Y5JpUBOGaSW30w-jgSXyLeOhWc-BtUXzBTVSSh7hDkWoblxCciFf8ENgUiDdRAWOEUkm9bTfqubQn1"
+                src={profileImg}
               />
             </div>
+            
             <motion.div 
               className="absolute top-10 left-0 lg:left-10 bg-white dark:bg-surface-dark p-4 rounded-2xl shadow-xl"
               {...floatingAnimation}
@@ -89,14 +123,16 @@ const Hero = () => {
               </div>
             </motion.div>
             <motion.div 
-              className="absolute -bottom-6 w-full flex justify-center space-x-4"
+              className="absolute -bottom-16 w-full flex justify-center space-x-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <motion.a 
                 className="w-10 h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
-                href="#"
+                href="https://wa.me/8801516514923"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -104,7 +140,9 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 className="w-10 h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
-                href="#"
+                href="https://instagram.com/iamshakil01"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -112,7 +150,9 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 className="w-10 h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
-                href="#"
+                href="https://linkedin.com/in/iamshakil01"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -120,7 +160,9 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 className="w-10 h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
-                href="#"
+                href="https://github.com/iamshakil01"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -128,7 +170,9 @@ const Hero = () => {
               </motion.a>
               <motion.a 
                 className="w-10 h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
-                href="#"
+                href="https://facebook.com/iamshakil05"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >

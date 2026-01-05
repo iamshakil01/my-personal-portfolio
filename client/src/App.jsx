@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useLenis from './hooks/useLenis'
+import WelcomeModal from './components/WelcomeModal'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -12,6 +13,7 @@ import Footer from './components/Footer'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
+  const [showWelcome, setShowWelcome] = useState(false)
   
   // Initialize Lenis smooth scroll
   useLenis()
@@ -21,9 +23,35 @@ function App() {
     document.documentElement.classList.toggle('dark')
   }
 
+  const checkFirstVisit = () => {
+    const hasVisited = localStorage.getItem('hasVisitedPortfolio')
+    if (!hasVisited) {
+      setShowWelcome(true)
+      localStorage.setItem('hasVisitedPortfolio', 'true')
+    }
+  }
+
+  const showWelcomeModal = () => {
+    setShowWelcome(true)
+  }
+
+  useEffect(() => {
+    // Check if it's the first visit
+    checkFirstVisit()
+  }, [])
+
+  const handleWelcomeClose = () => {
+    setShowWelcome(false)
+  }
+
   return (
     <div className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 font-display transition-colors duration-300">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <WelcomeModal isOpen={showWelcome} onClose={handleWelcomeClose} />
+      <Navbar 
+        darkMode={darkMode} 
+        toggleDarkMode={toggleDarkMode} 
+        onHomeClick={showWelcomeModal} 
+      />
       <Hero />
       <Services />
       <About />

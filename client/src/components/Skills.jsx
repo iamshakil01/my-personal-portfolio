@@ -6,12 +6,12 @@ import { useStaggerAnimation } from '@/lib/animations'
 const Skills = () => {
   const gridRef = useStaggerAnimation()
   const skills = [
-    { name: 'Python', icon: 'fa-python', iconColor: 'text-blue-600', bgColor: 'bg-blue-100', projects: 14, experience: '4+' },
-    { name: 'JavaScript', icon: 'fa-js', iconColor: 'text-yellow-500', bgColor: 'bg-yellow-100', projects: 25, experience: '5+' },
-    { name: 'Node JS', icon: 'fa-node', iconColor: 'text-green-600', bgColor: 'bg-green-100', projects: 12, experience: '4+' },
-    { name: 'React', icon: 'fa-react', iconColor: 'text-cyan-500', bgColor: 'bg-cyan-100', projects: 7, experience: '3+' },
-    { name: 'Node JS', icon: 'fa-node-js', iconColor: 'text-green-700', bgColor: 'bg-green-100', projects: 5, experience: '2+' },
-    { name: 'MySQL', icon: 'fa-database', iconColor: 'text-orange-600', bgColor: 'bg-orange-100', projects: 10, experience: '3+', fas: true }
+    { name: 'MongoDB', icon: 'fa-leaf', iconColor: 'text-green-600', bgColor: 'bg-green-100', projects: 18, experience: '4+' },
+    { name: 'Express.js', icon: 'fa-server', iconColor: 'text-gray-700', bgColor: 'bg-gray-100', projects: 22, experience: '4+', fas: true },
+    { name: 'React', icon: 'fa-react', iconColor: 'text-cyan-500', bgColor: 'bg-cyan-100', projects: 25, experience: '5+' },
+    { name: 'Node.js', icon: 'fa-node', iconColor: 'text-green-600', bgColor: 'bg-green-100', projects: 20, experience: '4+' },
+    { name: 'JavaScript', icon: 'fa-js', iconColor: 'text-yellow-500', bgColor: 'bg-yellow-100', projects: 30, experience: '5+' },
+    { name: 'Redux', icon: 'fa-store', iconColor: 'text-purple-600', bgColor: 'bg-purple-100', projects: 15, experience: '3+', fas: true }
   ]
 
   return (
@@ -20,7 +20,7 @@ const Skills = () => {
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Skills</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl">
-            I possess a strong foundation in programming languages such as <span className="font-semibold text-primary">HTML, CSS, and JavaScript</span>, along with experience working with front-end frameworks such as <span className="font-semibold text-primary">React, Angular, and Vue</span>. I am also proficient in back-end technologies such as Node.js and PHP.
+            I possess strong expertise in the <span className="font-semibold text-primary">MERN stack (MongoDB, Express.js, React, Node.js)</span>, along with experience in modern development tools and frameworks. I'm proficient in <span className="font-semibold text-primary">JavaScript/TypeScript, Redux, REST APIs</span>, and various database technologies.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" ref={gridRef}>

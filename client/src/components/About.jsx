@@ -31,12 +31,12 @@ const About = () => {
               <span className="w-8 h-1 bg-primary rounded-full"></span>
               <span className="text-primary font-bold uppercase tracking-wide text-sm">About Me</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">A Full Stack Web Developer</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">A Full Stack MERN Developer</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              As a Full Stack Web Developer, I am responsible for designing and building complete web applications from start to finish. This includes creating user interfaces, writing server-side code, and managing databases. With my comprehensive knowledge of the entire web development process, I can efficiently turn ideas into fully functional websites or applications.
+              As a Full Stack MERN Developer, I specialize in building complete web applications using MongoDB, Express.js, React, and Node.js. From designing intuitive user interfaces with React to creating robust APIs with Node.js and Express, I handle every aspect of modern web development. With expertise in database design using MongoDB, I deliver end-to-end solutions that are scalable, efficient, and maintainable.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              I have a proven track record of delivering high-quality solutions that solve complex business problems. I am always eager to learn new technologies and improve my skills.
+              I have a proven track record of delivering high-quality MERN stack applications that solve complex business problems. I'm passionate about clean code, best practices, and staying updated with the latest technologies in the JavaScript ecosystem.
             </p>
             <Button size="lg">
               Contact Me
