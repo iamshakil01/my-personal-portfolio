@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "Full Stack Portfolio Website with React and Node.js",
+  "scripts": {
+    "install-all": "cd client && npm install && cd ../server && npm install",
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": ["portfolio", "react", "nodejs", "express", "fullstack"],
+  "author": "Chris Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
