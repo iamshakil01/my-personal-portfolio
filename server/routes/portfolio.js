@@ -61,14 +61,14 @@ router.get('/skills', (req, res) => {
 
 // Contact form endpoint
 router.post('/contact', (req, res) => {
-  const { name, email, message } = req.body
+  const { name, email, subject, message } = req.body
   
   if (!name || !email || !message) {
-    return res.status(400).json({ error: 'All fields are required' })
+    return res.status(400).json({ error: 'Name, email, and message fields are required' })
   }
   
   // Here you would typically send an email or save to database
-  console.log('Contact form submission:', { name, email, message })
+  console.log('Contact form submission:', { name, email, subject, message })
   
   res.json({ success: true, message: 'Thank you for your message! I will get back to you soon.' })
 })

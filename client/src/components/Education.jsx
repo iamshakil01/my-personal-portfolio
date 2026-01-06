@@ -2,12 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import heroLogo from '@/assets/programmingHero.png'
 import { useStaggerAnimation } from '@/lib/animations'
 
 const Education = () => {
   const gridRef = useStaggerAnimation()
   const education = [
-    { period: '2002 - 2012', institution: 'Academy of Pittsburgh', degree: 'School', variant: 'default', icon: 'fas fa-graduation-cap', description: 'Completed foundational education with excellence, developing strong academic base in mathematics and science.' },
+    { period: '2025 - 2025', institution: 'Programming Hero', degree: 'Mern Stack Devoloper', variant: 'default', icon: heroLogo, description: 'Successfully completed the MERN Stack Developer course at Programming Hero, building practical skills in modern web technologies, collaborating on real projects, and developing a strong foundation in both frontend and backend programming.' },
     { period: '2012 - 2014', institution: 'Agnes Scott College', degree: 'College', variant: 'secondary', icon: 'fas fa-university', description: 'Pursued higher education focusing on computer science fundamentals and programming concepts.' },
     { period: '2014 - 2017', institution: 'Abilene Christian University', degree: 'B.Sc. in CSE', variant: 'secondary', icon: 'fas fa-laptop-code', description: 'Bachelor degree in Computer Science and Engineering with specialization in web technologies and software development.' },
     { period: '2017 - 2019', institution: 'Stanford University', degree: 'M.Sc in Web Engineering', variant: 'secondary', icon: 'fas fa-cogs', description: 'Master degree focusing on advanced web technologies, full-stack development, and modern JavaScript frameworks.' },
@@ -60,7 +61,11 @@ const Education = () => {
                   <Card className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center text-white shadow-md">
-                        <i className={`text-lg ${item.icon}`}></i>
+                        {typeof item.icon === 'string' ? (
+                          <i className={`text-lg ${item.icon}`}></i>
+                        ) : (
+                          <img src={item.icon} alt={item.institution} className="w-6 h-6 object-contain rounded-sm bg-transparent" />
+                        )}
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">

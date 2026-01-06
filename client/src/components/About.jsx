@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import profileImg from '@/assets/profileImg.jpg'
 import { useSlideInLeft, useSlideInRight } from '@/lib/animations'
 
 const About = () => {
@@ -16,12 +17,12 @@ const About = () => {
               <img 
                 alt="Working on code" 
                 className="w-full h-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7138TRkRVhSAJwCnLKMEu2nOS67T59X59yjvS07LmeVH__1Ny1sRj5MAefGCzNOEmcMZEsQmQw5Ht3MrkmkT5KtvIppY7P6fdcOlpnM8v1Fss6n3iQBG2m7OdypMhld5YVcJJMjMgsVS4WL5KkyrfaYyIRsIMejKZVGzzV6t8DaP1GFIqlvbH_DsoXUdxjajJlhuADGbLLVaFfijCDiXc9p3YnX3H3M8FMqzhCmmq6mQEQPjnJhu87NM1IMjX7oTTgdp0jfE3Zt8N"
+                src={profileImg}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-bold text-xl">Chris Smith</p>
-                <p className="text-sm opacity-90">Senior Developer</p>
+                <p className="font-bold text-xl">SHAKIL AHMED NILOY</p>
+                <p className="text-sm opacity-90">MERN STACK Developer</p>
               </div>
             </div>
             <div className="absolute -z-10 -bottom-10 -left-10 w-full h-full bg-purple-200 dark:bg-purple-900/20 rounded-3xl"></div>

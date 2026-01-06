@@ -38,5 +38,25 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          'primary': '#7C3AED',
+          'primary-focus': '#5B21B6',
+          'primary-content': '#ffffff',
+          'base-100': '#F3F4F6',
+          'base-content': '#0F172A',
+        },
+        dark: {
+          'primary': '#A78BFA',
+          'primary-focus': '#7C3AED',
+          'primary-content': '#000000',
+          'base-100': '#0F172A',
+          'base-content': '#F3F4F6',
+        }
+      }
+    ],
+  },
 }
