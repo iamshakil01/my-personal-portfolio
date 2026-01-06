@@ -13,26 +13,6 @@ const Project = () => {
       title: 'Movie Master Studio',
       description: 'An entertainment platform for discovering and enjoying the latest movies and shows.',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwzip8mt7EDVB1-HZqxdM8TFbdS7392YF0VdgcsFTLisQgzSl4M-1XQjV6pY_bebusl7ZebaIlx6GWykXFOEq-eyTxlI9mHpKL3HzxjZZuTqbKKmTVj9CDs7cvC0QGat7l8GTOdF0jparAbAuJVw15AMiXg6ccA4EvQQCahupubjku9wz1N5agIrvEbX6wMBgIuVXXjHL7h327dr57WhBE2mx_8l7BIQ9QcDT_6usravSdVKVcRKMyEjSvCB5f1xApUKqA_f4Dpw0',
-    },
-    {
-      title: 'Movie Master Studio',
-      description: 'An entertainment platform for discovering and enjoying the latest movies and shows.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwzip8mt7EDVB1-HZqxdM8TFbdS7392YF0VdgcsFTLisQgzSl4M-1XQjV6pY_bebusl7ZebaIlx6GWykXFOEq-eyTxlI9mHpKL3HzxjZZuTqbKKmTVj9CDs7cvC0QGat7l8GTOdF0jparAbAuJVw15AMiXg6ccA4EvQQCahupubjku9wz1N5agIrvEbX6wMBgIuVXXjHL7h327dr57WhBE2mx_8l7BIQ9QcDT_6usravSdVKVcRKMyEjSvCB5f1xApUKqA_f4Dpw0',
-    },
-    {
-      title: 'Movie Master Studio',
-      description: 'An entertainment platform for discovering and enjoying the latest movies and shows.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwzip8mt7EDVB1-HZqxdM8TFbdS7392YF0VdgcsFTLisQgzSl4M-1XQjV6pY_bebusl7ZebaIlx6GWykXFOEq-eyTxlI9mHpKL3HzxjZZuTqbKKmTVj9CDs7cvC0QGat7l8GTOdF0jparAbAuJVw15AMiXg6ccA4EvQQCahupubjku9wz1N5agIrvEbX6wMBgIuVXXjHL7h327dr57WhBE2mx_8l7BIQ9QcDT_6usravSdVKVcRKMyEjSvCB5f1xApUKqA_f4Dpw0',
-    },
-    {
-      title: 'Movie Master Studio',
-      description: 'An entertainment platform for discovering and enjoying the latest movies and shows.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwzip8mt7EDVB1-HZqxdM8TFbdS7392YF0VdgcsFTLisQgzSl4M-1XQjV6pY_bebusl7ZebaIlx6GWykXFOEq-eyTxlI9mHpKL3HzxjZZuTqbKKmTVj9CDs7cvC0QGat7l8GTOdF0jparAbAuJVw15AMiXg6ccA4EvQQCahupubjku9wz1N5agIrvEbX6wMBgIuVXXjHL7h327dr57WhBE2mx_8l7BIQ9QcDT_6usravSdVKVcRKMyEjSvCB5f1xApUKqA_f4Dpw0',
-    },
-    {
-      title: 'Movie Master Studio',
-      description: 'An entertainment platform for discovering and enjoying the latest movies and shows.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCwzip8mt7EDVB1-HZqxdM8TFbdS7392YF0VdgcsFTLisQgzSl4M-1XQjV6pY_bebusl7ZebaIlx6GWykXFOEq-eyTxlI9mHpKL3HzxjZZuTqbKKmTVj9CDs7cvC0QGat7l8GTOdF0jparAbAuJVw15AMiXg6ccA4EvQQCahupubjku9wz1N5agIrvEbX6wMBgIuVXXjHL7h327dr57WhBE2mx_8l7BIQ9QcDT_6usravSdVKVcRKMyEjSvCB5f1xApUKqA_f4Dpw0',
     }
   ]
 

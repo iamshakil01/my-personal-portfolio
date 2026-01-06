@@ -81,26 +81,36 @@ const Hero = () => {
           >
             <div className="absolute w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] blob-bg opacity-20 dark:opacity-30 blur-2xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
-            {/* Perfect Circle - Clockwise */}
-            <motion.div 
-              className="absolute w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-full border-2 border-dashed border-primary/30"
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            />
-
-            <div className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[350px] h-[180px] sm:h-[220px] md:h-[280px] lg:h-[350px] bg-gradient-to-b from-purple-500 to-indigo-600 rounded-full flex items-end justify-center overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+            <div className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[350px] h-[180px] sm:h-[220px] md:h-[280px] lg:h-[350px] flex items-end justify-center overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 rounded-full">
               <img 
                 alt="Web Developer Portrait" 
-                className="w-full h-full object-cover object-top transform scale-100 sm:scale-110 translate-y-4" 
+                className="w-full h-full object-cover object-top transform scale-100 sm:scale-110 translate-y-4 rounded-full" 
                 src={profileImg}
               />
             </div>
+            
+            {/* Floating particles */}
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-primary rounded-full opacity-70"
+                style={{
+                  left: `${20 + i * 15}%`,
+                  top: `${25 + (i % 2) * 30}%`,
+                }}
+                animate={{
+                  y: [0, -20, 0],
+                  x: [0, 10, 0],
+                  opacity: [0.5, 1, 0.5],
+                }}
+                transition={{
+                  duration: 3 + i,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.3,
+                }}
+              />
+            ))}
 
             <motion.div 
               className="absolute top-10 left-2 sm:left-0 lg:left-10 bg-white dark:bg-surface-dark p-3 sm:p-4 rounded-2xl shadow-xl"
@@ -142,7 +152,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-whatsapp text-sm"></i>
+                <i className="fab fa-whatsapp text-sm text-green-500"></i>
               </motion.a>
               <motion.a 
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
@@ -152,7 +162,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-instagram text-sm"></i>
+                <i className="fab fa-instagram text-sm text-pink-500"></i>
               </motion.a>
               <motion.a 
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
@@ -162,7 +172,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-linkedin-in text-sm"></i>
+                <i className="fab fa-linkedin-in text-sm text-blue-600"></i>
               </motion.a>
               <motion.a 
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
@@ -172,7 +182,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-github text-sm"></i>
+                <i className="fab fa-github text-sm text-gray-800 dark:text-gray-200"></i>
               </motion.a>
               <motion.a 
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
@@ -182,7 +192,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-facebook-f text-sm"></i>
+                <i className="fab fa-facebook-f text-sm text-blue-700"></i>
               </motion.a>
             </motion.div>
           </motion.div>

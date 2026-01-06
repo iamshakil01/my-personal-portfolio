@@ -8,12 +8,16 @@ import { useStaggerAnimation } from '@/lib/animations'
 const Education = () => {
   const gridRef = useStaggerAnimation()
   const education = [
-    { period: '2025 - 2025', institution: 'Programming Hero', degree: 'Mern Stack Devoloper', variant: 'default', icon: heroLogo, description: 'Successfully completed the MERN Stack Developer course at Programming Hero, building practical skills in modern web technologies, collaborating on real projects, and developing a strong foundation in both frontend and backend programming.' },
-    { period: '2012 - 2014', institution: 'Agnes Scott College', degree: 'College', variant: 'secondary', icon: 'fas fa-university', description: 'Pursued higher education focusing on computer science fundamentals and programming concepts.' },
-    { period: '2014 - 2017', institution: 'Abilene Christian University', degree: 'B.Sc. in CSE', variant: 'secondary', icon: 'fas fa-laptop-code', description: 'Bachelor degree in Computer Science and Engineering with specialization in web technologies and software development.' },
-    { period: '2017 - 2019', institution: 'Stanford University', degree: 'M.Sc in Web Engineering', variant: 'secondary', icon: 'fas fa-cogs', description: 'Master degree focusing on advanced web technologies, full-stack development, and modern JavaScript frameworks.' },
-    { period: '2019 - 2021', institution: 'Oxford University', degree: 'M.B.A in Marketing', variant: 'secondary', icon: 'fas fa-chart-line', description: 'MBA degree with focus on digital marketing strategies and business development in technology sector.' },
-    { period: '2022 - Present', institution: 'Oxford University', degree: 'Ph.D in Running Algorithms', variant: 'secondary', icon: 'fas fa-flask', description: 'Currently pursuing doctoral research in optimization of running algorithms and computational efficiency.' }
+    { period: '2025 - Present', institution: 'Programming Hero', degree: 'Mern Stack Devoloper', variant: 'default', icon: heroLogo, description: 'Successfully completed the MERN Stack Developer course at Programming Hero, building practical skills in modern web technologies, collaborating on real projects, and developing a strong foundation in both frontend and backend programming.' },
+
+    { period: '2018 - 2023', institution: 'Dhaka Polytechnic Institute', degree: 'College', variant: 'Diploma in Engineering at Mechanical', icon: 'fas fa-cogs', description: 'Completed a Diploma in Mechanical Engineering at Dhaka Polytechnic Institute, gaining strong technical knowledge in mechanics, engineering principles, and problem-solving skills relevant to industrial practices.' },
+
+    { period: '2020 - 2020', institution: 'BEIOA-Light Engineering Training Institute (BLETI)', degree: 'Cad-Cam & CNC Machine Operator', variant: 'secondary', icon: 'fas fa-industry', description: 'Completed specialized training in CAD/CAM and CNC machine operation at BEIOA-Light Engineering Training Institute (BLETI), gaining hands-on skills in computer-aided design, precision machining, and automated manufacturing processes.' },
+    
+    { period: '2017 - 2017', institution: 'Nydasa Computer Academy', degree: 'MS Excel, Ms Word , Power Point', variant: 'secondary', icon: 'fas fa-laptop-code', description: 'Trained in Microsoft Office applications at Nydasa Computer Academy, including advanced Excel functions, Word document creation and formatting, and effective PowerPoint presentation design.' },
+
+    { period: '2016 - 2017', institution: 'UCEP-Bangladesh', degree: 'Secondary School Certificate', variant: 'GPA-5.00', icon: 'fas fa-graduation-cap', description: 'Achieved Secondary School Certificate from UCEP-Bangladesh, developing solid fundamentals in core academic subjects and establishing a strong educational foundation for future studies.' },
+
   ]
 
   return (

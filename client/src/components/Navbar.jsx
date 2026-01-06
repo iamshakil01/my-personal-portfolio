@@ -32,12 +32,12 @@ const Navbar = ({ darkMode, toggleDarkMode, onHomeClick }) => {
   }, [])
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#services', label: 'Service' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#home', label: 'Home', icon: 'fas fa-home' },
+    { href: '#about', label: 'About', icon: 'fas fa-user' },
+    { href: '#services', label: 'Service', icon: 'fas fa-concierge-bell' },
+    { href: '#portfolio', label: 'Project', icon: 'fas fa-briefcase' },
+    { href: '#skills', label: 'Skills', icon: 'fas fa-code' },
+    { href: '#contact', label: 'Contact', icon: 'fas fa-envelope' }
   ]
 
   const toggleMobileMenu = () => {
@@ -70,12 +70,13 @@ const Navbar = ({ darkMode, toggleDarkMode, onHomeClick }) => {
                       onHomeClick();
                     }
                   }}
-                  className={`font-medium transition-all duration-300 relative ${
+                  className={`font-medium transition-all duration-300 relative flex items-center gap-2 ${
                     isActive
                       ? 'text-primary dark:text-primary'
                       : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary'
                   }`}
                 >
+                  <i className={`${link.icon} text-sm`}></i>
                   {link.label}
                   {isActive && (
                     <motion.span
@@ -133,12 +134,13 @@ const Navbar = ({ darkMode, toggleDarkMode, onHomeClick }) => {
                         }
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`font-medium py-2 px-4 rounded-lg transition ${
+                      className={`font-medium py-2 px-4 rounded-lg transition flex items-center gap-2 ${
                         isActive
                           ? 'text-primary dark:text-primary bg-primary/10 dark:bg-primary/10'
                           : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
                     >
+                      <i className={`${link.icon} text-sm`}></i>
                       {link.label}
                     </a>
                   )

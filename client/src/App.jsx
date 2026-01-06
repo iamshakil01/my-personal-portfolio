@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import About from './components/About'
-import Portfolio from './components/Portfolio'
+import Project from './components/Project'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
@@ -55,7 +55,7 @@ function App() {
       <Hero />
       <Services />
       <About />
-      <Portfolio />
+      <Project />
       <Education />
       <Skills />
       <Contact />
