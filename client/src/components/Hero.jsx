@@ -88,7 +88,7 @@ const Hero = () => {
                 src={profileImg}
               />
             </div>
-            
+          
             {/* Floating particles */}
             {[...Array(6)].map((_, i) => (
               <motion.div
@@ -113,7 +113,7 @@ const Hero = () => {
             ))}
 
             <motion.div 
-              className="absolute top-10 left-2 sm:left-0 lg:left-10 bg-white dark:bg-surface-dark p-3 sm:p-4 rounded-2xl shadow-xl"
+              className="absolute top-10 left-2 sm:left-0 lg:left-10  dark:bg-surface-dark p-3 sm:p-4 rounded-2xl shadow-xl"
               {...floatingAnimation}
             >
               <div className="text-center">
@@ -145,54 +145,54 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <motion.a 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center transition-all duration-300 hover:bg-green-500 hover:text-white" 
                 href="https://wa.me/8801516514923"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-whatsapp text-sm text-green-500"></i>
+                <i className="fab fa-whatsapp text-base text-green-600 dark:text-green-400"></i>
               </motion.a>
               <motion.a 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center transition-all duration-300 hover:bg-pink-500 hover:text-white" 
                 href="https://instagram.com/iamshakil01"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-instagram text-sm text-pink-500"></i>
+                <i className="fab fa-instagram text-base text-pink-600 dark:text-pink-400"></i>
               </motion.a>
               <motion.a 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center transition-all duration-300 hover:bg-blue-500 hover:text-white" 
                 href="https://linkedin.com/in/iamshakil01"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-linkedin-in text-sm text-blue-600"></i>
+                <i className="fab fa-linkedin-in text-base text-blue-600 dark:text-blue-400"></i>
               </motion.a>
               <motion.a 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center transition-all duration-300 hover:bg-gray-800 hover:text-white" 
                 href="https://github.com/iamshakil01"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-github text-sm text-gray-800 dark:text-gray-200"></i>
+                <i className="fab fa-github text-base text-gray-800 dark:text-gray-200"></i>
               </motion.a>
               <motion.a 
-                className="w-8 h-8 sm:w-10 sm:h-10 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary shadow-lg transition" 
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:text-white" 
                 href="https://facebook.com/iamshakil05"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <i className="fab fa-facebook-f text-sm text-blue-700"></i>
+                <i className="fab fa-facebook-f text-base text-blue-700 dark:text-blue-400"></i>
               </motion.a>
             </motion.div>
           </motion.div>
