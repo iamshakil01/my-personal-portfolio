@@ -2,13 +2,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import heroLogo from '@/assets/programmingHero.png'
 import { useStaggerAnimation } from '@/lib/animations'
 
 const Education = () => {
   const gridRef = useStaggerAnimation()
   const education = [
-    { period: '2025 - Present', institution: 'Programming Hero', degree: 'Mern Stack Devoloper', variant: 'default', icon: heroLogo, description: 'Successfully completed the MERN Stack Developer course at Programming Hero, building practical skills in modern web technologies, collaborating on real projects, and developing a strong foundation in both frontend and backend programming.' },
+    { period: '2025 - Present', institution: 'Programming Hero', degree: 'Mern Stack Devoloper', variant: 'default', icon: 'fas fa-laptop-code', description: 'Successfully completed the MERN Stack Developer course at Programming Hero, building practical skills in modern web technologies, collaborating on real projects, and developing a strong foundation in both frontend and backend programming.' },
 
     { period: '2018 - 2023', institution: 'Dhaka Polytechnic Institute', degree: 'College', variant: 'Diploma in Engineering at Mechanical', icon: 'fas fa-cogs', description: 'Completed a Diploma in Mechanical Engineering at Dhaka Polytechnic Institute, gaining strong technical knowledge in mechanics, engineering principles, and problem-solving skills relevant to industrial practices.' },
 

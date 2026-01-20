@@ -1,6 +1,16 @@
 import express from 'express'
+import nodemailer from 'nodemailer'
 
 const router = express.Router()
+
+// Create transporter for Gmail
+const transporter = nodemailer.createTransporter({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER || 'iamshakill02@gmail.com',
+    pass: process.env.EMAIL_PASS || process.env.GMAIL_APP_PASSWORD
+  }
+});
 
 // Sample data
 const portfolioData = {
@@ -60,17 +70,45 @@ router.get('/skills', (req, res) => {
 })
 
 // Contact form endpoint
-router.post('/contact', (req, res) => {
+router.post('/contact', async (req, res) => {
   const { name, email, subject, message } = req.body
   
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Name, email, and message fields are required' })
   }
   
-  // Here you would typically send an email or save to database
-  console.log('Contact form submission:', { name, email, subject, message })
-  
-  res.json({ success: true, message: 'Thank you for your message! I will get back to you soon.' })
+  try {
+    // Send email notification
+    const mailOptions = {
+      from: process.env.EMAIL_USER || 'iamshakill02@gmail.com',
+      to: process.env.EMAIL_USER || 'iamshakill02@gmail.com',
+      subject: subject || `New Contact from ${name}`,
+      text: `You have received a new message from your portfolio website:
+
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+Message: ${message}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `
+    };
+    
+    await transporter.sendMail(mailOptions);
+    
+    console.log('Contact form submission sent to email:', { name, email, subject, message });
+    
+    res.json({ success: true, message: 'Thank you for your message! I will get back to you soon.' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    // Still return success to avoid revealing server errors to client
+    res.json({ success: true, message: 'Thank you for your message! I will get back to you soon.' });
+  }
 })
 
 export default router
